@@ -1,0 +1,37 @@
+<!-- home.hbs -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <form method="POST" action="/calculate">
+      <label>
+        A:
+        <input type="number" name="a" required>
+      </label>
+      <br>
+      <label>
+        B:
+        <input type="number" name="b" required>
+      </label>
+      <br>
+      <label>
+        Operator:
+        <select name="operator" required>
+       
+          <option value="add">+ </option>
+          <option value="subtract">-</option>
+          <option value="multiply">*</option>
+        </select>
+      </label>
+      <br>
+      <button type="submit">Calculate</button>
+    </form>
+
+    {{#if result}}
+  <p>Result: {{result}}</p>
+{{/if}}
+  </body></html>
